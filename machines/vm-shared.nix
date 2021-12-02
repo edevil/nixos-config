@@ -43,7 +43,7 @@
   services.xserver = {
     enable = true;
     layout = "pt";
-    variant = "mac";
+    xkbVariant = "mac";
     dpi = 220;
 
     desktopManager = {
