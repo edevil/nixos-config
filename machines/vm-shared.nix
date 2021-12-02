@@ -23,7 +23,7 @@
   networking.hostName = "dev";
 
   # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Europe/Lisbon";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -42,7 +42,8 @@
   # setup windowing environment
   services.xserver = {
     enable = true;
-    layout = "us";
+    layout = "pt";
+    variant = "mac";
     dpi = 220;
 
     desktopManager = {
@@ -79,6 +80,7 @@
     niv
     rxvt_unicode
     xclip
+    cloudflared
 
     # I actually don't need this for any particular reason, especially
     # globally, but I keep this around as an example of how to use a
