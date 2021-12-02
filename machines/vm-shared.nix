@@ -40,10 +40,8 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # setup windowing environment
-  programs.sway.enable = true;
-
   services.xserver = {
-    enable = false;
+    enable = true;
     layout = "pt";
     xkbVariant = "mac";
     dpi = 220;
