@@ -81,6 +81,8 @@
     rxvt_unicode
     xclip
     cloudflared
+    vscode
+    google-chrome
 
     # I actually don't need this for any particular reason, especially
     # globally, but I keep this around as an example of how to use a

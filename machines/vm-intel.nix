@@ -3,6 +3,8 @@
     ./vm-shared.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   virtualisation.vmware.guest.enable = true;
 
   # Interface is this on Intel Fusion
