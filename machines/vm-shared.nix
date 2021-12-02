@@ -40,8 +40,10 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # setup windowing environment
+  programs.sway.enable = true;
+
   services.xserver = {
-    enable = true;
+    enable = false;
     layout = "pt";
     xkbVariant = "mac";
     dpi = 220;
@@ -55,9 +57,7 @@
       defaultSession = "none+i3";
       autoLogin.enable = true;
       autoLogin.user = "acruz";
-      # lightdm.enable = true;
-      sddm.enable = true;
-      # gdm.enable = true;
+      lightdm.enable = true;
 
       # AARCH64: For now, on Apple Silicon, we must manually set the
       # display resolution. This is a known issue with VMware Fusion.
