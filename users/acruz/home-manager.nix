@@ -102,7 +102,7 @@ let sources = import ../../nix/sources.nix; in {
       bbenoist.Nix
       ms-python.python
       ms-azuretools.vscode-docker
-    ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace; [
+    ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "vscode-bazel";
         publisher = "BazelBuild";
