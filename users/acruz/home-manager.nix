@@ -98,7 +98,11 @@ let sources = import ../../nix/sources.nix; in {
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-utils.extensionsFromVscodeMarketplace; [
+    extensions = (with pkgs.vscode-extensions; [
+      bbenoist.Nix
+      ms-python.python
+      ms-azuretools.vscode-docker
+    ]) ++ with pkgs.vscode-utils.extensionsFromVscodeMarketplace; [
       {
         name = "vscode-bazel";
         publisher = "BazelBuild";
@@ -140,18 +144,6 @@ let sources = import ../../nix/sources.nix; in {
         publisher = "James-Yu";
         version = "8.22.0";
         sha256 = "1j1qqwihzjlfs5w0nddd7msgi8r21jmgsyk2rg0abh9qi524f17f";
-      }
-      {
-        name = "vscode-docker";
-        publisher = "ms-azuretools";
-        version = "1.18.0";
-        sha256 = "0hhlhx3xy7x31xx2v3srvk67immajs6dm9h0wi49ii1rwx61zxah";
-      }
-      {
-        name = "python";
-        publisher = "ms-python";
-        version = "2021.11.1422169775";
-        sha256 = "1ax0lr0r9ip8pb3fzg462c00q98rlnpq5al5fkgaywcyx2k9pib3";
       }
       {
         name = "vscode-pylance";
