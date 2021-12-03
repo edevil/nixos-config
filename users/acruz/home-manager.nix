@@ -98,6 +98,9 @@ let sources = import ../../nix/sources.nix; in {
 
   programs.zsh = {
     enable = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
@@ -109,7 +112,7 @@ let sources = import ../../nix/sources.nix; in {
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      theme = "robbyrussel";
+      theme = "robbyrussell";
     };
   };
 
