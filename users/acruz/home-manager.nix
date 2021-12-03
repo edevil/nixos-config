@@ -99,7 +99,7 @@ let sources = import ../../nix/sources.nix; in {
   programs.vscode = {
     enable = true;
     extensions = (with pkgs.vscode-extensions; [
-      bbenoist.Nix
+      #bbenoist.Nix
       ms-python.python
       ms-azuretools.vscode-docker
     ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
