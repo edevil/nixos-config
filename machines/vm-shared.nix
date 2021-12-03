@@ -52,7 +52,8 @@
     };
 
     displayManager = {
-      defaultSession = "none+i3";
+      #defaultSession = "none+i3";
+      defaultSession = "none+xmonad";
       autoLogin.enable = true;
       autoLogin.user = "acruz";
       lightdm.enable = true;
