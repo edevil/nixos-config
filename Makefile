@@ -31,6 +31,7 @@ test:
 # in one step but when I tried to merge them I got errors. One day.
 vm/bootstrap0:
 	ssh $(SSH_OPTIONS) -p$(NIXPORT) root@$(NIXADDR) " \
+		wipefs -a /dev/$(NIXBLOCKDEVICE); \
 		parted /dev/$(NIXBLOCKDEVICE) -- mklabel gpt; \
 		parted /dev/$(NIXBLOCKDEVICE) -- mkpart primary 512MiB -8GiB; \
 		parted /dev/$(NIXBLOCKDEVICE) -- mkpart primary linux-swap -8GiB 100\%; \
@@ -77,7 +78,7 @@ vm/secrets:
 	# SSH keys
 	rsync -av -e 'ssh $(SSH_OPTIONS)' \
 		--exclude='environment' \
-		--no-specials --no-devices \
+		--no-specials --no-devices --no-links \
 		$(HOME)/.ssh/ $(NIXUSER)@$(NIXADDR):~/.ssh
 
 # copy the Nix configurations into the VM.
