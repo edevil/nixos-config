@@ -67,7 +67,8 @@
     };
 
     windowManager = {
-      i3.enable = true;
+      # i3.enable = true;
+      xmonad.enable = true;
     };
   };
 
@@ -93,7 +94,6 @@
     rxvt_unicode
     xclip
     cloudflared
-    vscode
     google-chrome
 
     # I actually don't need this for any particular reason, especially

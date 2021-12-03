@@ -96,6 +96,49 @@ let sources = import ../../nix/sources.nix; in {
     };
   };
 
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      BazelBuild.vscode-bazel
+      DotJoshJohnson.xml
+      eamodio.gitlens
+      golang.go
+      GrapeCity.gc-excelviewer
+      hashicorp.terraform
+      James-Yu.latex-workshop
+      ms-azuretools.vscode-docker
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-toolsai.jupyter
+      ms-toolsai.jupyter-keymap
+      ms-toolsai.jupyter-renderers
+      ms-vscode-remote.remote-containers
+      ms-vscode-remote.remote-ssh
+      ms-vscode-remote.remote-ssh-edit
+      ms-vscode-remote.vscode-remote-extensionpack
+      ms-vscode.cpptools
+      rebornix.ruby
+      redhat.vscode-commons
+      redhat.vscode-yaml
+      rust-lang.rust
+      wholroyd.HCL
+      wingrunr21.vscode-ruby
+      zxh404.vscode-proto3
+    ];
+    keybindings = [
+      {
+        key = "ctrl+c";
+        command = "editor.action.clipboardCopyAction";
+        when = "textInputFocus";
+     }
+    ];
+    userSettings = {
+      "editor.fontSize" = 12;
+      "editor.tabSize" = 2;
+      "update.channel" = "none";
+    };
+  };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
