@@ -99,31 +99,31 @@ let sources = import ../../nix/sources.nix; in {
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      BazelBuild.vscode-bazel
-      DotJoshJohnson.xml
-      eamodio.gitlens
-      golang.go
-      GrapeCity.gc-excelviewer
-      hashicorp.terraform
-      James-Yu.latex-workshop
-      ms-azuretools.vscode-docker
-      ms-python.python
-      ms-python.vscode-pylance
-      ms-toolsai.jupyter
-      ms-toolsai.jupyter-keymap
-      ms-toolsai.jupyter-renderers
-      ms-vscode-remote.remote-containers
-      ms-vscode-remote.remote-ssh
-      ms-vscode-remote.remote-ssh-edit
-      ms-vscode-remote.vscode-remote-extensionpack
-      ms-vscode.cpptools
-      rebornix.ruby
-      redhat.vscode-commons
-      redhat.vscode-yaml
-      rust-lang.rust
-      wholroyd.HCL
-      wingrunr21.vscode-ruby
-      zxh404.vscode-proto3
+      vscode-bazel
+      xml
+      gitlens
+      go
+      gc-excelviewer
+      terraform
+      latex-workshop
+      vscode-docker
+      python
+      vscode-pylance
+      jupyter
+      jupyter-keymap
+      jupyter-renderers
+      remote-containers
+      remote-ssh
+      remote-ssh-edit
+      vscode-remote-extensionpack
+      cpptools
+      ruby
+      vscode-commons
+      vscode-yaml
+      rust
+      HCL
+      vscode-ruby
+      vscode-proto3
     ];
     keybindings = [
       {
