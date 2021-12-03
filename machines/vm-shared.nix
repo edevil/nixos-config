@@ -52,8 +52,8 @@
     };
 
     displayManager = {
-      #defaultSession = "none+i3";
-      defaultSession = "none+xmonad";
+      defaultSession = "none+i3";
+      #defaultSession = "none+xmonad";
       autoLogin.enable = true;
       autoLogin.user = "acruz";
       lightdm.enable = true;
@@ -68,8 +68,8 @@
     };
 
     windowManager = {
-      # i3.enable = true;
-      xmonad.enable = true;
+      i3.enable = true;
+      # xmonad.enable = true;
     };
   };
 
