@@ -1,7 +1,7 @@
 font_family Fira Code
 font_size 8.0
 
-copy_on_select on
+copy_on_select clipboard
 
 #--------------------------------------------------------------------
 # Key bindings
