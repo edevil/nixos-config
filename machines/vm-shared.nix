@@ -95,16 +95,6 @@
     niv
     rxvt_unicode
     xclip
-    cloudflared
-    google-chrome
-    lsof
-    docker-compose
-    wireshark
-
-    # I actually don't need this for any particular reason, especially
-    # globally, but I keep this around as an example of how to use a
-    # flake with an overlay. haha.
-    pgquarrel
 
     # This is needed for the vmware user tools clipboard to work.
     # You can test if you don't need this by deleting this and seeing

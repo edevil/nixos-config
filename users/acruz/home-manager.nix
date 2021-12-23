@@ -26,6 +26,12 @@ let sources = import ../../nix/sources.nix; in {
     pkgs.watch
     pkgs.zathura
 
+    pkgs.cloudflared
+    pkgs.google-chrome
+    pkgs.lsof
+    pkgs.docker-compose
+    pkgs.wireshark
+
     pkgs.tlaplusToolbox
     pkgs.tetex
   ];
